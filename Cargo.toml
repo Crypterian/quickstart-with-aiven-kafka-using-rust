@@ -1,0 +1,22 @@
+[package]
+name = "quickstart-with-aiven-kafka-using-rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Shared between both examples
+serde = { version = "1.0.139", features = ["derive"] }
+serde_json = "1.0.82"
+uuid = { version = "1.1.2", features = ["v4", "serde"] }
+rand = "0.8.5"
+chrono = { version = "0.4.19",  features = ["serde"] }
+
+# Used for the syncronus example
+kafka = "0.9.0"
+openssl = "0.10.41"
+
+# Used for the asyncronus example
+rdkafka = { version = "0.28.0", features = ["cmake-build", "ssl"] }
+tokio = { version = "1.20.0", features = ["full"] }
